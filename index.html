@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSOS — Launch Safe on Solana | Next-Gen Anti-MEV Launchpad</title>
+  <meta name="description" content="Launch Safe on Solana (LSOS) is the next-generation launchpad engineered with standalone liquidity pools, private Jito validator bundles, programmatic Streamflow locks, and the $7,500 Genesis Founder Utility Suite.">
+  <link rel="icon" type="image/svg+xml" href="lsos-svg-icon-acc.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Micro-Grid Background -->
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <div class="solana-gradient-glow" aria-hidden="true"></div>
+
+  <!-- Announcement & Development Status Header -->
+  <aside class="dev-banner" role="status" aria-label="Development status announcement">
+    <div class="dev-banner-inner">
+      <span class="status-pulse"></span>
+      <span class="dev-badge">DEVELOPMENT IN PROGRESS</span>
+      <span class="dev-text">Core Anchor PDA Engine &amp; Standalone Pools Under Construction — Mainnet Live: <strong>February 1, 2027</strong></span>
+      <span class="dev-pill">GENESIS COHORT OPEN (FIRST 10)</span>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <header class="site-header" id="top">
+    <div class="nav-container">
+      <a href="#top" class="brand-link" aria-label="LSOS Home">
+        <div class="brand-logo-mark">
+          <img src="lsos-svg-icon-acc.svg" alt="LSOS Icon" width="34" height="34" class="logo-svg">
+        </div>
+        <div class="brand-text-lockup">
+          <span class="brand-title">LSOS</span>
+          <span class="brand-sub">LAUNCH SAFE ON SOLANA</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#genesis-offer" class="nav-link">Genesis Offer <span class="hot-tag">FIRST 10</span></a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#safety-matrix" class="nav-link">Safety PDA</a>
+        <a href="#calculator" class="nav-link">Fee Simulator</a>
+        <a href="#roadmap" class="nav-link">Roadmap</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://t.me/lsos2026" target="_blank" rel="noopener noreferrer" class="btn-telegram" aria-label="Join Telegram channel">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          <span>Telegram</span>
+        </a>
+        <button type="button" class="btn-primary trigger-genesis-modal" id="nav-cta-btn">
+          <span>Apply as Genesis Founder</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-shell">
+        <div class="hero-content">
+          <div class="badge-row">
+            <span class="protocol-chip">
+              <span class="chip-glow"></span>
+              SOLANA MAINNET PROTOCOL
+            </span>
+            <span class="counter-chip">
+              <strong id="hero-slots-left">3</strong> of 10 Genesis Spots Remaining
+            </span>
+          </div>
+
+          <h1 id="hero-title" class="hero-headline">
+            LAUNCH SAFE<br>
+            <span class="solana-gradient-text">ON SOLANA.</span>
+          </h1>
+
+          <p class="hero-subtext">
+            The sovereign launchpad engineered with <strong>standalone liquidity pools</strong>, <strong>private Jito validator bundles</strong>, and <strong>programmatic Streamflow vesting</strong>. Zero upfront platform fees, 0.175% trading fees, and absolute investor safety.
+          </p>
+
+          <div class="hero-cta-group">
+            <button type="button" class="btn-primary btn-large trigger-genesis-modal">
+              <span>Claim Genesis Partner Slot</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <a href="#interactive-engine" class="btn-secondary btn-large">
+              <span>Inspect Live Engine</span>
+            </a>
+          </div>
+
+          <!-- Hero Metrics -->
+          <div class="hero-stats-row">
+            <div class="stat-card">
+              <span class="stat-value tabular">0.175%</span>
+              <span class="stat-label">Standalone Pool Fee</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value tabular">0 SOL</span>
+              <span class="stat-label">Upfront Deployment Cost</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value tabular">70% / 30%</span>
+              <span class="stat-label">Permanent LP / Linear Vest</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value tabular">$7,500</span>
+              <span class="stat-label">Free Genesis SaaS Suite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO VISUAL: Real-Time Engine Console & Deployment Simulator -->
+        <div class="hero-visual" id="interactive-engine">
+          <div class="engine-window">
+            <div class="engine-header">
+              <div class="terminal-dots" aria-hidden="true">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-title">
+                <span class="mono">LSOS_CORE_PDA_v1.0.so</span>
+                <span class="env-tag">SOLANA DEVNET / SANDBOX</span>
+              </div>
+              <div class="terminal-tabs" role="tablist">
+                <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="jito">Jito Shield</button>
+                <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="streamflow">Streamflow Lock</button>
+                <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="refund">Softcap Switch</button>
+              </div>
+            </div>
+
+            <div class="engine-body">
+              <!-- Tab 1: Jito Shield Simulation -->
+              <div class="tab-panel active" id="tab-jito" role="tabpanel">
+                <div class="sim-row">
+                  <span class="sim-label">Target Mempool:</span>
+                  <span class="sim-badge safe">PRIVATE JITO VALIDATOR BUNDLE (OFF-MEMPOOL)</span>
+                </div>
+                <div class="sim-row">
+                  <span class="sim-label">Block-Zero Frontrunner Protection:</span>
+                  <span class="sim-badge active-status">100% SHIELDED AT DEPLOYMENT</span>
+                </div>
+                <div class="sim-row">
+                  <span class="sim-label">MEV Sandwich Vulnerability:</span>
+                  <span class="sim-value mono text-cyan">0.00% (Sub-millisecond direct block landing)</span>
+                </div>
+                <div class="terminal-log mono" id="terminal-log">
+                  <div class="log-line"><span class="log-time">[21:42:01.004]</span> <span class="log-info">INIT</span> Anchor Program ID: <span class="text-sol">LSOS111111111111111111111111111111111111111</span></div>
+                  <div class="log-line"><span class="log-time">[21:42:01.020]</span> <span class="log-ok">VALIDATE</span> Standalone LP vault initialized with 70% locked liquidity.</div>
+                  <div class="log-line"><span class="log-time">[21:42:01.036]</span> <span class="log-ok">SHIELD</span> Routing deployment through private Jito-Solana bundle...</div>
+                  <div class="log-line"><span class="log-time">[21:42:01.042]</span> <span class="log-shield">PROTECTED</span> Public mempool bypassed. Zero sniper exposure detected.</div>
+                </div>
+              </div>
+
+              <!-- Tab 2: Streamflow Lock Simulation -->
+              <div class="tab-panel" id="tab-streamflow" role="tabpanel">
+                <div class="sim-row">
+                  <span class="sim-label">Team Allocation Vault:</span>
+                  <span class="sim-badge active-status">PROGRAMMATIC STREAMFLOW CONTRACT</span>
+                </div>
+                <div class="sim-row">
+                  <span class="sim-label">Release Schedule:</span>
+                  <span class="sim-value mono">Linear Milestone-Based (25% weekly / 4 weeks)</span>
+                </div>
+                <div class="sim-row">
+                  <span class="sim-label">Instant Developer Dump Risk:</span>
+                  <span class="sim-badge safe">IMPOSSIBLE BY CODE GOVERNANCE</span>
+                </div>
+                <div class="terminal-log mono">
+                  <div class="log-line"><span class="log-time">[STREAMFLOW]</span> Program PDA initialized for developer allocation.</div>
+                  <div class="log-line"><span class="log-time">[STREAMFLOW]</span> Emergency unlock disabled. Tokens locked until milestone verified.</div>
+                  <div class="log-line"><span class="log-time">[STREAMFLOW]</span> Investor assurance rating: 100% Non-Rug Verification.</div>
+                </div>
+              </div>
+
+              <!-- Tab 3: Softcap Switch Simulation -->
+              <div class="tab-panel" id="tab-refund" role="tabpanel">
+                <div class="sim-row">
+                  <span class="sim-label">Anchor PDA Condition:</span>
+                  <span class="sim-value mono">If Raised &lt; Softcap @ T-0 =&gt; Trigger Refund</span>
+                </div>
+                <div class="sim-row">
+                  <span class="sim-label">Refund Execution:</span>
+                  <span class="sim-badge safe">NON-CUSTODIAL INSTANT SOL WITHDRAWAL</span>
+                </div>
+                <div class="sim-row">
+                  <span class="sim-label">Timeline Control:</span>
+                  <span class="sim-value mono">Max 7-day presale window (Hardcoded at birth)</span>
+                </div>
+                <div class="terminal-log mono">
+                  <div class="log-line"><span class="log-time">[PDA_RULES]</span> Softcap target: 200 SOL | Current: 140 SOL</div>
+                  <div class="log-line"><span class="log-time">[PDA_RULES]</span> Countdown expiry check: ACTIVE</div>
+                  <div class="log-line"><span class="log-time">[PDA_RULES]</span> Refund Button state: ARMED for retail claim if softcap not reached.</div>
+                </div>
+              </div>
+
+              <!-- Engine Simulator Controls -->
+              <div class="engine-controls">
+                <button type="button" class="btn-terminal-action" id="btn-run-sim">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>Re-Execute Jito Bundle Simulation</span>
+                </button>
+                <span class="engine-status mono">STATUS: <span class="text-green">ONLINE</span> (Ping: 12ms)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE COUNTDOWN TO FEBRUARY 1, 2027 -->
+    <section class="countdown-section" aria-label="Official Launchpad Launch Countdown">
+      <div class="countdown-container">
+        <div class="countdown-header">
+          <span class="section-tag mono">MAINNET DEPLOYMENT COUNTDOWN</span>
+          <h2 class="countdown-title">OFFICIAL LSOS LAUNCHPAD MAINNET</h2>
+          <p class="countdown-caption">Target Launch Date: <strong>February 1, 2027 at 00:00 UTC</strong> — Standalone Liquidity Pools Live on Solana</p>
+        </div>
+
+        <div class="countdown-grid" id="mainnet-countdown" data-target="2027-02-01T00:00:00Z">
+          <div class="countdown-block">
+            <span class="countdown-number tabular" id="cd-days">--</span>
+            <span class="countdown-unit">DAYS</span>
+          </div>
+          <div class="countdown-divider">:</div>
+          <div class="countdown-block">
+            <span class="countdown-number tabular" id="cd-hours">--</span>
+            <span class="countdown-unit">HOURS</span>
+          </div>
+          <div class="countdown-divider">:</div>
+          <div class="countdown-block">
+            <span class="countdown-number tabular" id="cd-minutes">--</span>
+            <span class="countdown-unit">MINUTES</span>
+          </div>
+          <div class="countdown-divider">:</div>
+          <div class="countdown-block">
+            <span class="countdown-number tabular" id="cd-seconds">--</span>
+            <span class="countdown-unit">SECONDS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIAL GENESIS OFFER SECTION (FIRST 10 PROJECTS) -->
+    <section class="genesis-offer-section" id="genesis-offer" aria-labelledby="genesis-title">
+      <div class="section-shell">
+        <div class="section-head text-center">
+          <div class="badge-pill solana-border">
+            <span>OFFICIAL GENESIS PARTNERS COHORT</span>
+          </div>
+          <h2 id="genesis-title" class="section-heading">
+            LOOKING FOR OUR FIRST 10 PROJECTS.<br>
+            <span class="solana-gradient-text">FREE $7,500 SAAS UTILITY SUITE.</span>
+          </h2>
+          <p class="section-subtext">
+            Most launchpads dump your token onto a chart and leave you with zero utility. LSOS empowers your community from day zero with an enterprise-grade utility suite, fully funded for our first 10 Genesis Partners.
+          </p>
+        </div>
+
+        <!-- Allocation Status Tracker -->
+        <div class="allocation-tracker-card">
+          <div class="tracker-header">
+            <div class="tracker-info">
+              <span class="tracker-tag mono">GENESIS ALLOCATION QUOTA</span>
+              <h3 class="tracker-status">FIRST 10 PARTNER COHORT STATUS</h3>
+            </div>
+            <div class="slots-pill">
+              <span class="slots-count tabular"><span id="spots-claimed">7</span> / 10 CLAIMED</span>
+              <span class="slots-remain tabular">(<span id="spots-available">3</span> SLOTS REMAINING)</span>
+            </div>
+          </div>
+          <div class="progress-bar-shell" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar-fill" style="width: 70%;"></div>
+          </div>
+          <div class="tracker-footer">
+            <span class="mono text-muted">Verification: Non-Custodial Anchor Registry</span>
+            <button type="button" class="btn-claim-slot trigger-genesis-modal">
+              <span>Reserve 1 of 3 Remaining Slots</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- The $7,500 Utility Suite Grid -->
+        <div class="offer-cards-grid">
+          <div class="offer-card featured">
+            <div class="offer-badge">$2,500 VALUE • 100% FREE</div>
+            <div class="offer-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <h4 class="offer-title">Custom Web Interface &amp; Staking Dashboard</h4>
+            <p class="offer-desc">A tailored, high-converting token web interface and on-chain staking portal delivered within 7 days of partnership confirmation.</p>
+            <ul class="offer-features">
+              <li>Custom branded responsive frontend</li>
+              <li>Anchor on-chain staking contract deployment</li>
+              <li>Real-time APY &amp; TVL telemetry</li>
+            </ul>
+          </div>
+
+          <div class="offer-card">
+            <div class="offer-badge">$2,000 VALUE • 100% FREE</div>
+            <div class="offer-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h4 class="offer-title">2 Hardcoded On-Chain Mini-Games</h4>
+            <p class="offer-desc">Engage and retain your holders immediately with two custom-themed, provably fair play-to-earn mini-games directly integrated with your token.</p>
+            <ul class="offer-features">
+              <li>Provably fair on-chain mechanics</li>
+              <li>Token burning &amp; prize pool integration</li>
+              <li>Mobile-friendly browser gameplay</li>
+            </ul>
+          </div>
+
+          <div class="offer-card">
+            <div class="offer-badge">$1,800 VALUE • 100% FREE</div>
+            <div class="offer-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
+            <h4 class="offer-title">Standalone Android Application</h4>
+            <p class="offer-desc">A native, fully integrated Android app for your project with live chart tracking, community announcements, and token wallet connect.</p>
+            <ul class="offer-features">
+              <li>Dedicated APK build ready for distribution</li>
+              <li>Push notifications for announcements</li>
+              <li>Direct Solana dApp store compliance</li>
+            </ul>
+          </div>
+
+          <div class="offer-card">
+            <div class="offer-badge">$1,200 VALUE • 100% FREE</div>
+            <div class="offer-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
+            </div>
+            <h4 class="offer-title">48H GemRaiders Banner &amp; Exposure Push</h4>
+            <p class="offer-desc">Automated submission to premier Solana radar platforms with 48 hours of prominent banner placement and safety radar integration with 0 SOL audit fees.</p>
+            <ul class="offer-features">
+              <li>Automated safety radar submission</li>
+              <li>48-hour featured banner placement</li>
+              <li>Targeted Web3 investor reach</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURAL PILLARS (BENTO GRID) -->
+    <section class="features-section" id="architecture" aria-labelledby="arch-title">
+      <div class="section-shell">
+        <div class="section-head">
+          <span class="section-tag mono">TECHNICAL ARCHITECTURE</span>
+          <h2 id="arch-title" class="section-heading">
+            RE-ENGINEERING SOLANA LAUNCHPADS.<br>
+            <span class="solana-gradient-text">FROM BLOCK ZERO TO LIQUIDITY POOL.</span>
+          </h2>
+          <p class="section-subtext">
+            Traditional launchpads leave charts unprotected against predatory sniper bots, extract high operational fees, and offer zero capital protection. LSOS solves every vector through verified Anchor PDA smart laws.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento 1: Private Jito Validator Bundles -->
+          <div class="bento-card bento-span-2">
+            <div class="bento-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="bento-title">Private Jito Validator Bundles</h3>
+            <p class="bento-desc">
+              All deployment transactions bypass the vulnerable public Solana mempool. Bundled directly through private Jito validators, bots and sniper algorithms are left completely blind at deployment with zero MEV frontrunning.
+            </p>
+            <div class="bento-specs">
+              <span class="spec-pill">Mempool Bypassed</span>
+              <span class="spec-pill">Anti-Sandwich Architecture</span>
+              <span class="spec-pill">Block-Zero Protected</span>
+            </div>
+          </div>
+
+          <!-- Bento 2: Programmatic Streamflow Locks -->
+          <div class="bento-card">
+            <div class="bento-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="bento-title">Streamflow Team Locks</h3>
+            <p class="bento-desc">
+              Hardcoded at source code creation: developer and team allocations are automatically locked into Streamflow vaults with transparent linear milestone releases. No mass team exits possible.
+            </p>
+            <div class="bento-specs">
+              <span class="spec-pill">70% LP Locked Forever</span>
+              <span class="spec-pill">30% Milestone Vesting</span>
+            </div>
+          </div>
+
+          <!-- Bento 3: Anchor PDA Softcap Guarantee -->
+          <div class="bento-card" id="safety-matrix">
+            <div class="bento-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="bento-title">The Softcap Guarantee</h3>
+            <p class="bento-desc">
+              Presale durations are strictly fixed (up to 7 days maximum) and hardcoded into the Anchor PDA. If the minimum target is not reached at expiry, the non-custodial Refund Switch activates instantly for 100% SOL withdrawals.
+            </p>
+            <div class="bento-specs">
+              <span class="spec-pill">Fixed 7-Day Window</span>
+              <span class="spec-pill">Non-Custodial Refund Switch</span>
+            </div>
+          </div>
+
+          <!-- Bento 4: Standalone Liquidity Pools -->
+          <div class="bento-card bento-span-2">
+            <div class="bento-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>
+            </div>
+            <h3 class="bento-title">Standalone Independent Liquidity Pools (0.175% Fee)</h3>
+            <p class="bento-desc">
+              LSOS hosts native independent liquidity pools on Solana rather than relying on bloated AMMs. Enjoy an ultra-low 0.175% flat transaction fee — maximizing trader retention and capital efficiency for both SOL and USDC pairs.
+            </p>
+            <div class="bento-specs">
+              <span class="spec-pill">0.175% Flat Swap Fee</span>
+              <span class="spec-pill">Native SOL &amp; USDC Pairs</span>
+              <span class="spec-pill">Optimized Execution</span>
+            </div>
+          </div>
+
+          <!-- Bento 5: 0% Platform Tax on Utility Modules -->
+          <div class="bento-card">
+            <div class="bento-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3 class="bento-title">Zero-Greed Utility Modules</h3>
+            <p class="bento-desc">
+              Free mass airdrop engine to thousands of multi-sig wallets, and free deflationary token burn modules. Founders only cover native Solana network gas fees with 0% platform tax.
+            </p>
+            <div class="bento-specs">
+              <span class="spec-pill">Free Mass Airdrop</span>
+              <span class="spec-pill">Free Token Burn</span>
+              <span class="spec-pill">Native Gas Only</span>
+            </div>
+          </div>
+
+          <!-- Bento 6: Algorithmic Market Making Bot -->
+          <div class="bento-card">
+            <div class="bento-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+            </div>
+            <h3 class="bento-title">Turnkey MM Volume Bot</h3>
+            <p class="bento-desc">
+              Delivered for 0 SOL upfront directly inside your project dashboard. Easily configure target buy/sell ratios (e.g. 53% Buy / 47% Sell) to maintain continuous liquidity and steady market making.
+            </p>
+            <div class="bento-specs">
+              <span class="spec-pill">0 SOL Upfront</span>
+              <span class="spec-pill">Custom Ratios</span>
+              <span class="spec-pill">Deep Orderbook Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FEE & SAVINGS SIMULATOR -->
+    <section class="calculator-section" id="calculator" aria-labelledby="calc-title">
+      <div class="section-shell">
+        <div class="section-head text-center">
+          <span class="section-tag mono">TRANSPARENT VALUE ANALYSIS</span>
+          <h2 id="calc-title" class="section-heading">
+            FOUNDER COST &amp; SAVINGS CALCULATOR
+          </h2>
+          <p class="section-subtext">
+            Compare launching on LSOS versus traditional bonding curve platforms and external DEX infrastructure.
+          </p>
+        </div>
+
+        <div class="calc-card">
+          <div class="calc-inputs">
+            <div class="input-group">
+              <div class="input-label-row">
+                <label for="raise-slider">Target Presale / Raise Target</label>
+                <span class="input-val tabular mono" id="raise-val">250 SOL</span>
+              </div>
+              <input type="range" id="raise-slider" min="50" max="2000" step="25" value="250" class="slider">
+              <div class="slider-marks">
+                <span>50 SOL</span>
+                <span>500 SOL</span>
+                <span>1000 SOL</span>
+                <span>2000 SOL</span>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <div class="input-label-row">
+                <label for="volume-slider">Projected 30-Day Trading Volume</label>
+                <span class="input-val tabular mono" id="volume-val">$500,000</span>
+              </div>
+              <input type="range" id="volume-slider" min="100000" max="5000000" step="100000" value="500000" class="slider">
+              <div class="slider-marks">
+                <span>$100K</span>
+                <span>$1M</span>
+                <span>$2.5M</span>
+                <span>$5M</span>
+              </div>
+            </div>
+
+            <div class="calc-toggles">
+              <span class="toggle-title">Included Modules (100% Free on LSOS):</span>
+              <div class="toggle-chips">
+                <span class="chip checked">✓ Private Jito Shield (Included)</span>
+                <span class="chip checked">✓ MM Volume Bot (0 SOL Upfront)</span>
+                <span class="chip checked">✓ Streamflow Vault Locks</span>
+                <span class="chip checked">✓ Mass Airdrop &amp; Burn Tools</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div class="savings-headline">
+              <span class="savings-tag">ESTIMATED CAPITAL SAVED WITH LSOS</span>
+              <div class="savings-amount tabular" id="total-savings-val">$14,850</div>
+              <span class="savings-subtext">Saved in upfront fees, bot fees, LP locks, and trader transaction spread.</span>
+            </div>
+
+            <div class="comparison-breakdown">
+              <div class="comp-row">
+                <span class="comp-label">Upfront Platform Cost</span>
+                <span class="comp-other mono text-red">~$500 - $1,500</span>
+                <span class="comp-lsos mono text-green">0 SOL ($0)</span>
+              </div>
+              <div class="comp-row">
+                <span class="comp-label">Market Making Bot Cost</span>
+                <span class="comp-other mono text-red">~$1,500/mo</span>
+                <span class="comp-lsos mono text-green">0 SOL (Free)</span>
+              </div>
+              <div class="comp-row">
+                <span class="comp-label">Trading Swap Fee</span>
+                <span class="comp-other mono text-red">1.00% - 2.00%</span>
+                <span class="comp-lsos mono text-green">0.175% Flat</span>
+              </div>
+              <div class="comp-row highlight">
+                <span class="comp-label">Genesis SaaS Utility Suite</span>
+                <span class="comp-other mono text-red">Not Offered</span>
+                <span class="comp-lsos mono text-green">+$7,500 Free Bonus</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn-primary btn-block trigger-genesis-modal">
+              <span>Lock In Genesis Savings</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILED COMPARISON MATRIX -->
+    <section class="comparison-section">
+      <div class="section-shell">
+        <div class="section-head text-center">
+          <span class="section-tag mono">COMPREHENSIVE AUDIT</span>
+          <h2 class="section-heading">LSOS VS TRADITIONAL PLATFORMS</h2>
+          <p class="section-subtext">How our architecture stacks up against legacy Solana launchpads and bonding curve models.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th scope="col">Feature Architecture</th>
+                <th scope="col" class="th-lsos">LSOS Launchpad</th>
+                <th scope="col">Pump.fun</th>
+                <th scope="col">Traditional DEX Presales</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Mempool &amp; Sniper Protection</strong></td>
+                <td class="td-lsos"><span class="badge-good">Private Jito Bundles (100% Hidden)</span></td>
+                <td><span class="badge-bad">Public Mempool (Heavy MEV)</span></td>
+                <td><span class="badge-bad">Unprotected Sniping</span></td>
+              </tr>
+              <tr>
+                <td><strong>Developer Allocation Locks</strong></td>
+                <td class="td-lsos"><span class="badge-good">Automated Streamflow Locks (Linear)</span></td>
+                <td><span class="badge-bad">Zero Enforced Locks (Instant Dump)</span></td>
+                <td><span class="badge-neutral">Manual Lockers (Third Party)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Softcap Guarantee</strong></td>
+                <td class="td-lsos"><span class="badge-good">Anchor PDA Non-Custodial Refund Switch</span></td>
+                <td><span class="badge-bad">No Softcap Mechanism</span></td>
+                <td><span class="badge-neutral">Centralized Manual Refunds</span></td>
+              </tr>
+              <tr>
+                <td><strong>Liquidity Pool Fee</strong></td>
+                <td class="td-lsos"><span class="badge-good">0.175% Ultra-Low Flat Fee</span></td>
+                <td><span class="badge-bad">1.00% Platform Extraction</span></td>
+                <td><span class="badge-neutral">0.25% - 0.50% AMM Fee</span></td>
+              </tr>
+              <tr>
+                <td><strong>Liquidity Lock Standard</strong></td>
+                <td class="td-lsos"><span class="badge-good">70% Programmatically Locked Forever</span></td>
+                <td><span class="badge-neutral">Bonding Curve Migration</span></td>
+                <td><span class="badge-bad">Variable / Easily Altered</span></td>
+              </tr>
+              <tr>
+                <td><strong>Genesis Utilities Suite</strong></td>
+                <td class="td-lsos"><span class="badge-good">$7,500 Suite (Dashboard, P2E, Android App)</span></td>
+                <td><span class="badge-bad">None</span></td>
+                <td><span class="badge-bad">None</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP SECTION -->
+    <section class="roadmap-section" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="section-shell">
+        <div class="section-head text-center">
+          <span class="section-tag mono">DEVELOPMENT MILESTONES</span>
+          <h2 id="roadmap-title" class="section-heading">TRANSPARENT PROTOCOL ROADMAP</h2>
+          <p class="section-subtext">Clear, verifiable phases from Solana Mainnet genesis to sovereign cross-chain liquidity.</p>
+        </div>
+
+        <div class="roadmap-track">
+          <!-- Phase 1 -->
+          <div class="roadmap-phase active-phase">
+            <div class="phase-indicator">
+              <span class="phase-number mono">01</span>
+              <span class="phase-status">IN ACTIVE DEV</span>
+            </div>
+            <div class="phase-card">
+              <div class="phase-date mono text-sol">FEBRUARY 1, 2027 • MAINNET LIVE</div>
+              <h3 class="phase-title">Solana Mainnet Launch &amp; Standalone Pools</h3>
+              <p class="phase-desc">Deployment of the core LSOS Anchor PDA contracts, standalone SOL &amp; USDC liquidity pools, Streamflow integration, and onboarding the Genesis 10 Partner projects.</p>
+              <ul class="phase-deliverables">
+                <li>Zero-MEV Private Jito Validator Bundling</li>
+                <li>Streamflow Programmatic Team Locks</li>
+                <li>0.175% Flat Transaction Fee Pools</li>
+                <li>Genesis 10 Project Deployments ($7,500 Suite)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="roadmap-phase">
+            <div class="phase-indicator">
+              <span class="phase-number mono">02</span>
+              <span class="phase-status">UPCOMING</span>
+            </div>
+            <div class="phase-card">
+              <div class="phase-date mono text-cyan">MID 2027 • TESTNET &amp; EXPANSION</div>
+              <h3 class="phase-title">Cross-Chain Testnet &amp; Multi-Network Expansion</h3>
+              <p class="phase-desc">Initiating the incentivized cross-chain testnet to stress-test tokenomics and MM bot execution before expanding sovereign pools to Base, BNB Chain, and Arbitrum.</p>
+              <ul class="phase-deliverables">
+                <li>Cross-Chain Deployment to Base, BNB &amp; Arbitrum</li>
+                <li>Risk-Free Sandbox with Bug Bounty Rewards</li>
+                <li>Multi-Chain Algorithmic Liquidity Router</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="roadmap-phase">
+            <div class="phase-indicator">
+              <span class="phase-number mono">03</span>
+              <span class="phase-status">SOVEREIGN VISION</span>
+            </div>
+            <div class="phase-card">
+              <div class="phase-date mono text-magenta">2,500 PROJECTS MILESTONE</div>
+              <h3 class="phase-title">The Sovereign Global Ecosystem</h3>
+              <p class="phase-desc">Upon achieving the 2,500 integrated projects milestone, initiating sovereign infrastructure funded directly from the corporate multi-sig vault.</p>
+              <ul class="phase-deliverables">
+                <li>Dedicated LSOS Layer-1 Network for zero-fraud launches</li>
+                <li>LSOS Cryptographic Stablecoin for cross-chain liquidity</li>
+                <li>Non-Custodial iOS &amp; Android Web3 Security Wallet</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER APPLICATION & GENESIS INTAKE SECTION -->
+    <section class="apply-section" id="apply" aria-labelledby="apply-title">
+      <div class="section-shell">
+        <div class="apply-box">
+          <div class="apply-header text-center">
+            <span class="section-tag mono">GENESIS COHORT INTAKE</span>
+            <h2 id="apply-title" class="apply-heading">
+              SUBMIT YOUR PROJECT FOR THE<br>
+              <span class="solana-gradient-text">FIRST 10 GENESIS SPOTS.</span>
+            </h2>
+            <p class="apply-subtext">
+              Direct application for founders launching on Solana. Lock in 0 SOL upfront costs, the $7,500 SaaS utility suite, and standalone pool access.
+            </p>
+          </div>
+
+          <form id="genesis-application-form" class="genesis-form" novalidate>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="founder-name">Founder / Team Name</label>
+                <input type="text" id="founder-name" name="founderName" placeholder="e.g. Alex (Solana Dev)" required>
+              </div>
+
+              <div class="form-field">
+                <label for="telegram-handle">Telegram Handle <span class="required">*</span></label>
+                <input type="text" id="telegram-handle" name="telegramHandle" placeholder="@yourhandle" required>
+              </div>
+
+              <div class="form-field">
+                <label for="project-name">Project / Token Name <span class="required">*</span></label>
+                <input type="text" id="project-name" name="projectName" placeholder="e.g. CyberSol Protocol" required>
+              </div>
+
+              <div class="form-field">
+                <label for="launch-type">Launch Format <span class="required">*</span></label>
+                <select id="launch-type" name="launchType" required>
+                  <option value="" disabled selected>Select Launch Type</option>
+                  <option value="presale">Presale with Softcap PDA Guarantee</option>
+                  <option value="fairlaunch">Fair Launch with Streamflow Locks</option>
+                  <option value="migration">Liquidity Migration to 0.175% Pool</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="target-date">Estimated Launch Window</label>
+                <select id="target-date" name="targetDate">
+                  <option value="q1-2027">February / Q1 2027 (Mainnet Day 1)</option>
+                  <option value="q2-2027">Q2 2027</option>
+                  <option value="q3-2027">Q3 2027 (Cross-Chain Cohort)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="target-raise">Target Raise / Liquidity Size</label>
+                <input type="text" id="target-raise" name="targetRaise" placeholder="e.g. 200 - 500 SOL">
+              </div>
+            </div>
+
+            <div class="form-field full-width">
+              <label for="project-details">Project Description &amp; Utility Needs</label>
+              <textarea id="project-details" name="projectDetails" rows="3" placeholder="Tell us briefly about your project concept, target audience, and which Genesis SaaS deliverables (Staking Dashboard, P2E games, Android app) you require."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary btn-large btn-submit" id="btn-submit-app">
+                <span>Submit Genesis Partner Application</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+              <span class="form-note mono">Direct submission to LSOS Core Founders. Confidential &amp; Non-Custodial.</span>
+            </div>
+
+            <!-- Submission Message Feedback -->
+            <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+          </form>
+
+          <!-- Contact Alternatives -->
+          <div class="contact-channels">
+            <span class="channels-title mono">DIRECT FOUNDER CHANNELS:</span>
+            <div class="channel-links">
+              <a href="https://t.me/lsos2026" target="_blank" rel="noopener noreferrer" class="channel-item">
+                <span class="channel-icon">💬</span>
+                <span>Telegram: <strong>t.me/lsos2026</strong></span>
+              </a>
+              <a href="mailto:Contact@launchsafeonsolana.com" class="channel-item">
+                <span class="channel-icon">✉️</span>
+                <span>Email: <strong>Contact@launchsafeonsolana.com</strong></span>
+              </a>
+              <span class="channel-item">
+                <span class="channel-icon">🌐</span>
+                <span>Domain: <strong>launchsafeonsolana.com</strong></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo-mark small">
+            <img src="lsos-svg-icon-acc.svg" alt="LSOS" width="28" height="28">
+          </div>
+          <span class="footer-brand-text">LSOS — LAUNCH SAFE ON SOLANA</span>
+        </div>
+        <div class="footer-nav">
+          <a href="#genesis-offer">Genesis Offer</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#calculator">Fee Calculator</a>
+          <a href="#roadmap">Milestones</a>
+          <a href="https://t.me/lsos2026" target="_blank" rel="noopener noreferrer">Telegram Channel</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">
+          <strong>Notice:</strong> LSOS is actively in development. Mainnet deployment target is February 1, 2027. All smart contract PDA modules are subject to multi-sig verification and audit standards prior to public launch. This interface is an official development preview for prospective project partners.
+        </p>
+        <div class="footer-meta">
+          <span class="mono">© 2026-2027 Launch Safe on Solana. All rights reserved.</span>
+          <span class="mono text-sol">Solana Network Standard</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: QUICK APPLICATION FOR GENESIS ALLOCATION -->
+  <div class="modal-overlay" id="genesis-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="modal-close-btn" aria-label="Close application modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge mono">GENESIS PARTNER INTAKE</span>
+        <h3 id="modal-title" class="modal-title">RESERVE A GENESIS SLOT</h3>
+        <p class="modal-sub">Only <strong id="modal-slots-left">3</strong> of the initial 10 partner allocations remain open. Complete to secure the $7,500 SaaS Utility Suite.</p>
+      </div>
+
+      <form id="modal-form" class="modal-form">
+        <div class="form-field">
+          <label for="modal-handle">Your Telegram Handle <span class="required">*</span></label>
+          <input type="text" id="modal-handle" placeholder="@dev_solana" required>
+        </div>
+        <div class="form-field">
+          <label for="modal-project">Project / Token Name <span class="required">*</span></label>
+          <input type="text" id="modal-project" placeholder="e.g. ApexSol" required>
+        </div>
+        <div class="form-field">
+          <label for="modal-launch">Launch Type</label>
+          <select id="modal-launch">
+            <option value="presale">Presale (Softcap PDA Guaranteed)</option>
+            <option value="fairlaunch">Fair Launch (Streamflow Locked)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary btn-block">
+          <span>Submit for Immediate Review</span>
+        </button>
+        <div id="modal-feedback" class="form-feedback mono" aria-live="polite"></div>
+      </form>
+
+      <div class="modal-footer-note mono">
+        Direct link: <a href="https://t.me/lsos2026" target="_blank" rel="noopener noreferrer">t.me/lsos2026</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

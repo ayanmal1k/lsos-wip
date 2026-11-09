@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Top Ribbon: Upper front arm (Cyan to Azure Blue) -->
+    <linearGradient id="grad_top_arm" gradientUnits="userSpaceOnUse" x1="173" y1="114" x2="214" y2="202">
+      <stop offset="0%" stop-color="#00f4fd" />
+      <stop offset="14%" stop-color="#00e4ff" />
+      <stop offset="29%" stop-color="#00cdff" />
+      <stop offset="43%" stop-color="#00b2ff" />
+      <stop offset="57%" stop-color="#0099ff" />
+      <stop offset="71%" stop-color="#0083ff" />
+      <stop offset="86%" stop-color="#0072ff" />
+      <stop offset="100%" stop-color="#0569ff" />
+    </linearGradient>
+
+    <!-- Top Ribbon: Underneath folded flap (Blue to Violet/Purple) -->
+    <linearGradient id="grad_top_flap" gradientUnits="userSpaceOnUse" x1="272" y1="316" x2="65" y2="325">
+      <stop offset="0%" stop-color="#1558fc" />
+      <stop offset="14%" stop-color="#0e4ffc" />
+      <stop offset="29%" stop-color="#1040f8" />
+      <stop offset="43%" stop-color="#172ff4" />
+      <stop offset="57%" stop-color="#2522eb" />
+      <stop offset="71%" stop-color="#3715e9" />
+      <stop offset="86%" stop-color="#4f13ee" />
+      <stop offset="100%" stop-color="#5922f6" />
+    </linearGradient>
+
+    <!-- Bottom Ribbon: Upper folded flap (Electric Cyan to Neon Magenta) -->
+    <linearGradient id="grad_bot_flap" gradientUnits="userSpaceOnUse" x1="219" y1="219" x2="451" y2="252">
+      <stop offset="0%" stop-color="#00edff" />
+      <stop offset="12%" stop-color="#00bfff" />
+      <stop offset="25%" stop-color="#0582ff" />
+      <stop offset="37%" stop-color="#2653fe" />
+      <stop offset="50%" stop-color="#592af5" />
+      <stop offset="62%" stop-color="#9d16f2" />
+      <stop offset="75%" stop-color="#d011f2" />
+      <stop offset="87%" stop-color="#f11df1" />
+      <stop offset="100%" stop-color="#f92df2" />
+    </linearGradient>
+
+    <!-- Bottom Ribbon: Lower front arm (Magenta to Electric Blue to Cyan) -->
+    <linearGradient id="grad_bot_arm" gradientUnits="userSpaceOnUse" x1="459" y1="300" x2="142" y2="448">
+      <stop offset="0%" stop-color="#db15f2" />
+      <stop offset="16%" stop-color="#a20ef1" />
+      <stop offset="33%" stop-color="#4f21f3" />
+      <stop offset="50%" stop-color="#095cff" />
+      <stop offset="66%" stop-color="#00a2fd" />
+      <stop offset="83%" stop-color="#00e1fb" />
+      <stop offset="100%" stop-color="#00fafb" />
+    </linearGradient>
+  </defs>
+
+  <!-- Top Shape: Flap then Arm -->
+  <path id="top-ribbon-flap" d="M 56 281 L 59 287 L 63 291 L 186 364 L 194 362 L 272 316 L 273 313 L 151 241 L 146 235 L 146 230 Z" fill="url(#grad_top_flap)" />
+  <path id="top-ribbon-arm" d="M 146 230 L 214 188 L 327 122 L 334 115 L 339 106 L 375 12 L 359 19 L 140 138 L 88 168 L 79 178 L 71 199 L 71 204 L 56 271 L 56 281 Z" fill="url(#grad_top_arm)" />
+
+  <!-- Bottom Shape: Flap then Arm -->
+  <path id="bottom-ribbon-flap" d="M 451 252 L 438 242 L 313 167 L 219 219 L 220 223 L 343 299 L 349 307 Z" fill="url(#grad_bot_flap)" />
+  <path id="bottom-ribbon-arm" d="M 349 307 L 346 310 L 185 398 L 176 409 L 143 498 L 436 340 L 444 332 L 450 318 L 454 264 L 451 252 Z" fill="url(#grad_bot_arm)" />
+</svg>
