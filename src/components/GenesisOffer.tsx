@@ -34,12 +34,7 @@ export default function GenesisOffer({ onOpenModal }: GenesisOfferProps) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center gsap-reveal-title">
-          <div className="inline-flex items-center gap-2 rounded-full border border-solana-magenta/40 bg-solana-magenta/10 px-4 py-1.5 font-mono text-xs font-semibold text-pink-300 shadow-[0_0_12px_rgba(219,21,242,0.2)]">
-            <IconSparkles className="h-3.5 w-3.5" />
-            <span>OFFICIAL GENESIS PARTNERS COHORT</span>
-          </div>
-
-          <h2 className="mt-6 font-lsos text-3xl tracking-wider text-white sm:text-5xl lg:text-6xl">
+          <h2 className="font-lsos text-3xl tracking-wider text-white sm:text-5xl lg:text-6xl">
             LOOKING FOR OUR FIRST 10 PROJECTS. <br />
             <span className="text-solana-gradient">
               FREE $7,500 SAAS UTILITY SUITE.
@@ -55,9 +50,6 @@ export default function GenesisOffer({ onOpenModal }: GenesisOfferProps) {
         <div className="mx-auto mt-12 max-w-3xl rounded-2xl border border-white/10 bg-white/[0.02] p-6 text-center backdrop-blur-md sm:p-8 gsap-reveal-title">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row sm:text-left">
             <div>
-              <span className="font-mono text-xs font-semibold tracking-wider text-solana-cyan uppercase">
-                GENESIS APPLICATION QUEUE
-              </span>
               <h3 className="text-xl font-bold text-white">
                 0 OF 10 GENESIS SLOTS SHORTLISTED
               </h3>

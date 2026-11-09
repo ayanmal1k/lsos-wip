@@ -79,10 +79,7 @@ export default function SafetyVerifier() {
     <section id="safety-verifier" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center">
-          <span className="font-mono text-xs font-semibold tracking-wider text-solana-cyan uppercase">
-            SIMULATED SMART CONTRACT AUDIT
-          </span>
-          <h2 className="mt-4 font-lsos text-3xl tracking-wider text-white sm:text-5xl lg:text-6xl">
+          <h2 className="font-lsos text-3xl tracking-wider text-white sm:text-5xl lg:text-6xl">
             THE ANCHOR PDA AUDIT MATRIX
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-white/70 sm:text-lg">

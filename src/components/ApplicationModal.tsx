@@ -2,7 +2,7 @@
 
 import React from "react";
 import { X } from "lucide-react";
-import { IconTelegram, IconXTwitter, IconMail, IconArrowUpRight, SolanaGradientDefs } from "./CustomIcons";
+import { IconTelegram, IconMail, IconArrowUpRight, SolanaGradientDefs } from "./CustomIcons";
 
 interface ApplicationModalProps {
   isOpen: boolean;
@@ -35,23 +35,19 @@ export default function ApplicationModal({ isOpen, onClose }: ApplicationModalPr
 
         {/* Modal Header */}
         <div className="pr-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-solana-cyan/30 bg-solana-cyan/10 px-3 py-1 font-mono text-[11px] font-semibold text-solana-cyan">
-            <span>GENESIS PARTNERS INTAKE</span>
-          </div>
-
-          <h3 className="mt-3 font-lsos text-2xl tracking-wider text-white sm:text-3xl">
+          <h3 className="font-lsos text-2xl tracking-wider text-white sm:text-3xl">
             CONNECT WITH <br />
             <span className="text-solana-gradient">LSOS FOUNDERS</span>
           </h3>
 
           <p className="mt-2 text-xs leading-relaxed text-white/60 sm:text-sm">
-            To ensure rapid onboarding and dedicated technical assistance for our <strong>First 10 Genesis Partners</strong>, applications are reviewed directly via DM.
+            To ensure rapid onboarding and dedicated technical assistance for our <strong>First 10 Genesis Partners</strong>, applications are handled directly via Telegram or Email.
           </p>
         </div>
 
-        {/* DM Action Buttons */}
+        {/* Action Buttons: Telegram & Email (No X) */}
         <div className="mt-8 space-y-3.5">
-          {/* Telegram DM Button */}
+          {/* Telegram Button */}
           <a
             href="https://t.me/lsos2026"
             target="_blank"
@@ -64,10 +60,10 @@ export default function ApplicationModal({ isOpen, onClose }: ApplicationModalPr
               </div>
               <div className="text-left">
                 <span className="block text-sm font-bold text-white group-hover:text-solana-cyan">
-                  Send DM on Telegram
+                  Send Message on Telegram
                 </span>
                 <span className="block font-mono text-xs text-white/50">
-                  @lsos2026 • Direct Response
+                  @lsos2026 • Direct Founder Response
                 </span>
               </div>
             </div>
@@ -75,23 +71,21 @@ export default function ApplicationModal({ isOpen, onClose }: ApplicationModalPr
             <IconArrowUpRight className="h-5 w-5 text-solana-cyan transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
 
-          {/* X (Twitter) DM Button */}
+          {/* Email Button */}
           <a
-            href="https://x.com/lsos2026"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:Contact@launchsafeonsolana.com"
             className="group flex items-center justify-between rounded-2xl border border-solana-magenta/30 bg-solana-magenta/[0.06] p-4 transition-all duration-300 hover:border-solana-magenta hover:bg-solana-magenta/[0.12] hover:shadow-lg hover:shadow-solana-magenta/10"
           >
             <div className="flex items-center gap-3.5">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-solana-magenta/30 bg-solana-magenta/10">
-                <IconXTwitter className="h-6 w-6" />
+                <IconMail className="h-6 w-6" />
               </div>
               <div className="text-left">
                 <span className="block text-sm font-bold text-white group-hover:text-pink-300">
-                  Send DM on X (Twitter)
+                  Send Email to Founders
                 </span>
                 <span className="block font-mono text-xs text-white/50">
-                  @lsos2026 • Direct Message
+                  Contact@launchsafeonsolana.com
                 </span>
               </div>
             </div>
@@ -100,20 +94,13 @@ export default function ApplicationModal({ isOpen, onClose }: ApplicationModalPr
           </a>
         </div>
 
-        {/* Email Alternative & Founder Note */}
+        {/* Founder Note */}
         <div className="mt-8 border-t border-white/10 pt-5 text-center">
-          <p className="text-xs text-white/50">
-            Prefer email? Reach us at{" "}
-            <a
-              href="mailto:Contact@launchsafeonsolana.com"
-              className="font-mono text-solana-cyan hover:underline"
-            >
-              Contact@launchsafeonsolana.com
-            </a>
-          </p>
-
-          <p className="mt-2 font-mono text-[11px] text-white/30">
+          <p className="font-mono text-xs text-white/60">
             0 / 10 Genesis Spots Shortlisted • Direct Founder Review
+          </p>
+          <p className="mt-1 text-[11px] text-white/40">
+            Include your project name, token concept, and estimated launch window.
           </p>
         </div>
       </div>

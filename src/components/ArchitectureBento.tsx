@@ -26,11 +26,7 @@ export default function ArchitectureBento() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <div className="gsap-reveal-title">
-          <div className="inline-flex items-center gap-2 rounded-full border border-solana-cyan/30 bg-solana-cyan/10 px-3 py-1 font-mono text-xs font-semibold text-solana-cyan">
-            <span>TECHNICAL ARCHITECTURE &amp; SAFEGUARDS</span>
-          </div>
-
-          <h2 className="mt-4 font-lsos text-3xl tracking-wider text-white sm:text-5xl lg:text-6xl">
+          <h2 className="font-lsos text-3xl tracking-wider text-white sm:text-5xl lg:text-6xl">
             HARDCODED ON-CHAIN INTEGRITY. <br />
             <span className="text-solana-gradient">
               ENGINEERED FROM BLOCK ZERO.
