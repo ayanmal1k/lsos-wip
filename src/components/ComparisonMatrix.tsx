@@ -59,7 +59,7 @@ export default function ComparisonMatrix() {
   return (
     <section className="relative py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="text-center">
+        <div className="text-center gsap-reveal-title">
           <h2 className="font-lsos text-3xl tracking-wider text-white sm:text-5xl lg:text-6xl">
             LSOS VS TRADITIONAL PLATFORMS
           </h2>
@@ -68,7 +68,7 @@ export default function ComparisonMatrix() {
           </p>
         </div>
 
-        <div className="glass-panel mx-auto mt-16 max-w-5xl overflow-hidden rounded-2xl border border-white/10">
+        <div className="glass-panel gsap-reveal-card mx-auto mt-16 max-w-5xl overflow-hidden rounded-2xl border border-white/10">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>

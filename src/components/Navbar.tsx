@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { IconTelegram, IconArrowUpRight } from "./CustomIcons";
+import { IconTelegram, IconArrowUpRight, IconMenu, IconClose } from "./CustomIcons";
 
 interface NavbarProps {
   onOpenModal: () => void;
@@ -145,7 +144,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
             className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white md:hidden"
             aria-label="Toggle Navigation Menu"
           >
-            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileMenuOpen ? <IconClose className="h-5 w-5" /> : <IconMenu className="h-5 w-5" />}
           </button>
         </div>
 

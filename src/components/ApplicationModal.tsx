@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { X } from "lucide-react";
-import { IconTelegram, IconMail, IconArrowUpRight, SolanaGradientDefs } from "./CustomIcons";
+import { IconTelegram, IconMail, IconArrowUpRight, IconClose, SolanaGradientDefs } from "./CustomIcons";
 
 interface ApplicationModalProps {
   isOpen: boolean;
@@ -30,7 +29,7 @@ export default function ApplicationModal({ isOpen, onClose }: ApplicationModalPr
           className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition-colors hover:bg-white/15 hover:text-white"
           aria-label="Close Modal"
         >
-          <X className="h-5 w-5" />
+          <IconClose className="h-5 w-5" />
         </button>
 
         {/* Modal Header */}

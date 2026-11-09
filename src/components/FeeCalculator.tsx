@@ -18,7 +18,7 @@ export default function FeeCalculator() {
   return (
     <section id="calculator" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="text-center">
+        <div className="text-center gsap-reveal-title">
           <h2 className="font-lsos text-3xl tracking-wider text-white sm:text-5xl lg:text-6xl">
             FOUNDER COST &amp; SAVINGS CALCULATOR
           </h2>
@@ -27,7 +27,7 @@ export default function FeeCalculator() {
           </p>
         </div>
 
-        <div className="glass-panel mx-auto mt-16 max-w-5xl overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+        <div className="glass-panel gsap-reveal-card mx-auto mt-16 max-w-5xl overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
           <div className="grid lg:grid-cols-12">
             {/* Input Controls */}
             <div className="p-8 sm:p-10 lg:col-span-7 lg:border-r lg:border-white/10">

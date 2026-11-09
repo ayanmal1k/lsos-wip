@@ -2,14 +2,12 @@
 
 import React, { useState } from "react";
 import {
-  ShieldCheck,
-  ShieldAlert,
-  CheckCircle2,
-  XCircle,
-  Cpu,
-  RefreshCw,
-  Terminal,
-} from "lucide-react";
+  IconShieldCheckBrand,
+  IconShieldAlertBrand,
+  IconCheckmark,
+  IconXMark,
+  IconTerminalPrompt,
+} from "./CustomIcons";
 
 export default function SafetyVerifier() {
   const [mode, setMode] = useState<"lsos" | "legacy">("lsos");
@@ -58,15 +56,15 @@ export default function SafetyVerifier() {
       legacyDetail: "No automatic refund; funds held manually by deployer",
     },
     {
-      label: "Authority Manipulation",
-      desc: "Mint and freeze authorities after deployment",
+      label: "Genesis Ecosystem Utility",
+      desc: "Working community apps and staking at token generation",
       lsosStatus: "PASSED",
-      lsosDetail: "Mint & Freeze Authorities Revoked Programmatically",
-      legacyStatus: "VARIABLE",
-      legacyDetail: "Often retained or requires manual revocation step",
+      lsosDetail: "$7,500 Full SaaS Suite (Staking, P2E, Android App)",
+      legacyStatus: "NONE",
+      legacyDetail: "Bare chart only; developer must pay third-party agencies",
     },
     {
-      label: "Transaction Overhead",
+      label: "Liquidity Pool AMM Swap Fee",
       desc: "Platform swap fee on liquidity pool",
       lsosStatus: "PASSED",
       lsosDetail: "0.175% Ultra-Low Flat Fee on Standalone Pools",
@@ -76,9 +74,9 @@ export default function SafetyVerifier() {
   ];
 
   return (
-    <section id="safety-verifier" className="relative py-24 md:py-32">
+    <section id="safety" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="text-center">
+        <div className="text-center gsap-reveal-title">
           <h2 className="font-lsos text-3xl tracking-wider text-white sm:text-5xl lg:text-6xl">
             THE ANCHOR PDA AUDIT MATRIX
           </h2>
@@ -96,7 +94,7 @@ export default function SafetyVerifier() {
                   : "text-white/60 hover:text-white"
               }`}
             >
-              <ShieldCheck className="h-4 w-4" />
+              <IconShieldCheckBrand className="h-4 w-4" />
               <span>LSOS PROTECTED PDA</span>
             </button>
 
@@ -108,17 +106,17 @@ export default function SafetyVerifier() {
                   : "text-white/60 hover:text-white"
               }`}
             >
-              <ShieldAlert className="h-4 w-4" />
+              <IconShieldAlertBrand className="h-4 w-4" />
               <span>UNPROTECTED LEGACY LAUNCH</span>
             </button>
           </div>
         </div>
 
         {/* Audit Results Table Card */}
-        <div className="glass-panel mx-auto mt-12 max-w-4xl overflow-hidden rounded-3xl border border-white/10 p-6 sm:p-8">
+        <div className="glass-panel gsap-reveal-card mx-auto mt-12 max-w-4xl overflow-hidden rounded-3xl border border-white/10 p-6 sm:p-8">
           <div className="flex items-center justify-between border-b border-white/10 pb-4 font-mono text-xs">
             <div className="flex items-center gap-2">
-              <Terminal className="h-4 w-4 text-solana-cyan" />
+              <IconTerminalPrompt className="h-4 w-4 text-solana-cyan" />
               <span className="text-white/60">
                 INSPECTOR:{" "}
                 <strong className="text-white">
@@ -183,9 +181,9 @@ export default function SafetyVerifier() {
                     </div>
 
                     {isPassed ? (
-                      <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-400" />
+                      <IconCheckmark className="h-5 w-5 shrink-0" />
                     ) : (
-                      <XCircle className="h-5 w-5 shrink-0 text-red-400" />
+                      <IconXMark className="h-5 w-5 shrink-0" />
                     )}
                   </div>
                 </div>
