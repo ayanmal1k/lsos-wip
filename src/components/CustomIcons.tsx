@@ -679,46 +679,21 @@ export function IconClose({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
-// 25. Custom LSOS Tech Regular Style Dollar Sign ($)
-// Precision-matched to the exact vector outline of 'S' in LSOS-Tech-Regular.ttf with chamfered currency spines
+// 25. Clean, bold dollar sign matching LSOS Tech Regular typography in good size
 export function LsosDollar({
-  className = "inline-block h-[0.74em] w-auto align-baseline -mb-[0.01em] mr-[0.04em]",
+  className = "font-sans font-black text-[0.88em] leading-none inline-block align-baseline mr-[0.04em]",
   gradient = true,
 }: {
   className?: string;
   gradient?: boolean;
 }) {
   return (
-    <svg
-      viewBox="60 -70 942 840"
-      className={className}
+    <span
+      className={`${className} ${gradient ? "" : "text-white"}`}
       aria-label="$"
-      style={{ display: "inline-block", verticalAlign: "baseline" }}
     >
-      <defs>
-        <linearGradient id="lsosDollarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#00f4fd" />
-          <stop offset="35%" stopColor="#0569ff" />
-          <stop offset="70%" stopColor="#5922f6" />
-          <stop offset="100%" stopColor="#db15f2" />
-        </linearGradient>
-      </defs>
-      {/* Top Chamfered Currency Stem */}
-      <path
-        d="M 505 -60 L 555 -60 L 575 -40 L 575 180 L 485 180 L 485 -40 Z"
-        fill={gradient ? "url(#lsosDollarGrad)" : "currentColor"}
-      />
-      {/* Bottom Chamfered Currency Stem */}
-      <path
-        d="M 485 520 L 575 520 L 575 740 L 555 760 L 505 760 L 485 740 Z"
-        fill={gradient ? "url(#lsosDollarGrad)" : "currentColor"}
-      />
-      {/* Exact Vector Glyph S from LSOS Tech Regular font */}
-      <path
-        d="M 140 48 L 169 29 L 216 10 L 266 2 L 1002 4 L 853 166 L 329 166 L 314 172 L 298 185 L 289 200 L 285 216 L 287 235 L 293 248 L 310 265 L 335 275 L 783 275 L 831 284 L 878 305 L 905 324 L 943 368 L 956 397 L 966 429 L 966 525 L 958 555 L 945 586 L 926 614 L 884 654 L 827 685 L 785 696 L 754 700 L 60 700 L 195 542 L 707 540 L 733 528 L 749 511 L 754 496 L 754 475 L 747 456 L 728 439 L 705 431 L 258 431 L 211 423 L 155 401 L 134 385 L 100 349 L 83 317 L 73 286 L 71 172 L 83 126 L 100 92 Z"
-        fill={gradient ? "url(#lsosDollarGrad)" : "currentColor"}
-      />
-    </svg>
+      $
+    </span>
   );
 }
 
