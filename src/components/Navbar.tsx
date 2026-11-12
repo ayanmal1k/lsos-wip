@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { IconTelegram, IconArrowUpRight, IconMenu, IconClose } from "./CustomIcons";
+import { IconTelegram, IconXTwitter, IconArrowUpRight, IconMenu, IconClose } from "./CustomIcons";
 
 interface NavbarProps {
   onOpenModal: () => void;
@@ -132,6 +132,17 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
           {/* Desktop Actions */}
           <div className="hidden items-center gap-3 md:flex">
             <a
+              href="https://x.com/LSOS2026"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Official LSOS X (Twitter)"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-3.5 py-2 text-xs font-medium text-white/80 transition-all hover:border-solana-magenta/40 hover:bg-white/[0.08] hover:text-white"
+            >
+              <IconXTwitter className="h-4 w-4" />
+              <span>@LSOS2026</span>
+            </a>
+
+            <a
               href="https://t.me/lsos2026"
               target="_blank"
               rel="noopener noreferrer"
@@ -219,6 +230,15 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
               </Link>
 
               <div className="mt-4 flex flex-col gap-3 pt-4 border-t border-white/10">
+                <a
+                  href="https://x.com/LSOS2026"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/5 py-3 text-sm font-medium text-white"
+                >
+                  <IconXTwitter className="h-4 w-4" />
+                  <span>Follow @LSOS2026 on X</span>
+                </a>
                 <a
                   href="https://t.me/lsos2026"
                   target="_blank"

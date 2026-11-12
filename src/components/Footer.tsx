@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { IconTelegram, IconMail, IconArrowUpRight } from "./CustomIcons";
+import { IconTelegram, IconXTwitter, IconMail, IconArrowUpRight } from "./CustomIcons";
 
 export default function Footer() {
   return (
@@ -31,6 +31,17 @@ export default function Footer() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-4 text-xs font-mono">
+              <a
+                href="https://x.com/LSOS2026"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Official LSOS X (Twitter)"
+                className="inline-flex items-center gap-1.5 text-solana-cyan hover:underline"
+              >
+                <IconXTwitter className="h-4 w-4" />
+                <span>x.com/LSOS2026</span>
+              </a>
+
               <a
                 href="https://t.me/lsos2026"
                 target="_blank"
@@ -122,11 +133,24 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
+                    href="https://x.com/LSOS2026"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 hover:text-white"
+                  >
+                    <IconXTwitter className="h-3.5 w-3.5" />
+                    <span>Official X (@LSOS2026)</span>
+                    <IconArrowUpRight className="h-3 w-3" />
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://t.me/lsos2026"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 hover:text-white"
+                    className="flex items-center gap-1.5 hover:text-white"
                   >
+                    <IconTelegram className="h-3.5 w-3.5" />
                     <span>Telegram Announcements</span>
                     <IconArrowUpRight className="h-3 w-3" />
                   </a>
