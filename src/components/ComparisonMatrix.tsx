@@ -69,7 +69,7 @@ export default function ComparisonMatrix() {
         </div>
 
         <div className="glass-panel gsap-reveal-card mx-auto mt-16 max-w-5xl overflow-hidden rounded-2xl border border-white/10">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto overscroll-contain [-webkit-overflow-scrolling:touch]">
             <table className="w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-white/10 bg-[#080811] font-mono text-xs uppercase tracking-wider text-white/50">

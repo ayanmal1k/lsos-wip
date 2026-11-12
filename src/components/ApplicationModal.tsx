@@ -30,15 +30,15 @@ export default function ApplicationModal({ isOpen, onClose }: ApplicationModalPr
       />
 
       {/* Modal Dialog Card */}
-      <div className="relative w-full max-w-xl overflow-hidden rounded-3xl border border-white/15 bg-[#090912] p-7 shadow-2xl shadow-black sm:p-9">
+      <div className="relative w-full max-w-xl max-h-[calc(100dvh-2rem)] overflow-y-auto overscroll-contain rounded-3xl border border-white/15 bg-[#090912] p-6 sm:p-9 shadow-2xl shadow-black pb-[max(1.75rem,env(safe-area-inset-bottom,0px))]">
         {/* Ambient Top Glow */}
         <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-solana-cyan/15 blur-3xl" />
         <div className="pointer-events-none absolute -left-20 -bottom-20 h-40 w-40 rounded-full bg-solana-magenta/15 blur-3xl" />
 
-        {/* Close Button */}
+        {/* Close Button (44x44px touch target) */}
         <button
           onClick={onClose}
-          className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition-colors hover:bg-white/15 hover:text-white"
+          className="absolute right-4 top-4 sm:right-5 sm:top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition-colors hover:bg-white/15 hover:text-white active:scale-95"
           aria-label="Close Modal"
         >
           <IconClose className="h-5 w-5" />

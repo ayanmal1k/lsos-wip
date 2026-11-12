@@ -24,7 +24,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
   return (
     <>
       {/* Top Protocol Status Bar */}
-      <aside className="sticky top-0 z-50 border-b border-white/5 bg-[#06060a]/90 backdrop-blur-md">
+      <aside className="sticky top-0 z-50 border-b border-white/5 bg-[#06060a]/90 backdrop-blur-md pt-[env(safe-area-inset-top,0px)]">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-xs">
           <div className="flex items-center gap-2">
             <span className="relative flex h-2 w-2">
@@ -145,19 +145,19 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
             </button>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Toggle (44x44px touch target) */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white md:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white active:scale-95 md:hidden"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <IconClose className="h-5 w-5" /> : <IconMenu className="h-5 w-5" />}
           </button>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Dropdown Menu with Safe-Area Inset Bottom */}
         {mobileMenuOpen && (
-          <div className="border-b border-white/10 bg-[#07070c] px-6 py-6 md:hidden">
+          <div className="border-b border-white/10 bg-[#07070c] px-6 pt-6 pb-[max(1.75rem,env(safe-area-inset-bottom,0px))] md:hidden overscroll-contain">
             <div className="flex flex-col gap-4">
               <Link
                 href="#genesis-offer"

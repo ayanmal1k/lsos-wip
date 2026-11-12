@@ -21,9 +21,9 @@ export default function Home() {
   return (
     <>
       <GSAPScrollController />
-      
+
       <Navbar onOpenModal={() => setIsModalOpen(true)} />
-      
+
       <main className="flex-1">
         <Hero onOpenModal={() => setIsModalOpen(true)} />
         <BrandMarquee />

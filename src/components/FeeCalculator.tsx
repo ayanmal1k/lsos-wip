@@ -50,7 +50,7 @@ export default function FeeCalculator() {
                     step="25"
                     value={raiseSol}
                     onChange={(e) => setRaiseSol(Number(e.target.value))}
-                    className="mt-4 h-2 w-full cursor-pointer appearance-none rounded-lg bg-white/10 accent-solana-cyan"
+                    className="mt-4 h-2 w-full cursor-pointer appearance-none rounded-lg bg-white/10 accent-solana-cyan touch-none"
                   />
                   <div className="mt-2 flex justify-between font-mono text-[11px] text-white/40">
                     <span>Min: 50 SOL</span>
@@ -77,7 +77,7 @@ export default function FeeCalculator() {
                     step="100000"
                     value={volumeUsd}
                     onChange={(e) => setVolumeUsd(Number(e.target.value))}
-                    className="mt-4 h-2 w-full cursor-pointer appearance-none rounded-lg bg-white/10 accent-solana-cyan"
+                    className="mt-4 h-2 w-full cursor-pointer appearance-none rounded-lg bg-white/10 accent-solana-cyan touch-none"
                   />
                   <div className="mt-2 flex justify-between font-mono text-[11px] text-white/40">
                     <span>Min: $100K</span>

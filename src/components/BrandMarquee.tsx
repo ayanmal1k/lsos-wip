@@ -18,7 +18,7 @@ export default function BrandMarquee() {
   ];
 
   return (
-    <div className="relative overflow-hidden border-y border-white/10 bg-[#06060c] py-4">
+    <div className="relative overflow-hidden border-y border-white/10 bg-[#06060c] py-4 [touch-action:pan-y]">
       {/* Ambient Glow behind Marquee */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-solana-cyan/5 via-solana-violet/5 to-solana-magenta/5" />
 
