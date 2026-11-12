@@ -680,9 +680,9 @@ export function IconClose({ className = "w-5 h-5" }: { className?: string }) {
 }
 
 // 25. Custom LSOS Tech Regular Style Dollar Sign ($)
-// Designed to match the geometric, chamfered, uppercase typography of LSOS Tech Regular
+// Precision-matched to the exact vector outline of 'S' in LSOS-Tech-Regular.ttf with chamfered currency spines
 export function LsosDollar({
-  className = "inline-block h-[0.84em] w-[0.6em] align-baseline -mb-[0.02em] mr-[0.04em]",
+  className = "inline-block h-[0.74em] w-auto align-baseline -mb-[0.01em] mr-[0.04em]",
   gradient = true,
 }: {
   className?: string;
@@ -690,8 +690,7 @@ export function LsosDollar({
 }) {
   return (
     <svg
-      viewBox="0 0 68 96"
-      fill="none"
+      viewBox="60 -70 942 840"
       className={className}
       aria-label="$"
       style={{ display: "inline-block", verticalAlign: "baseline" }}
@@ -704,23 +703,20 @@ export function LsosDollar({
           <stop offset="100%" stopColor="#db15f2" />
         </linearGradient>
       </defs>
-      {/* Central Vertical Currency Spine */}
-      <line
-        x1="34"
-        y1="5"
-        x2="34"
-        y2="91"
-        stroke={gradient ? "url(#lsosDollarGrad)" : "currentColor"}
-        strokeWidth="7"
-        strokeLinecap="round"
-      />
-      {/* Boxy Geometric S Body with Chamfered Corners matching LSOS Tech Regular */}
+      {/* Top Chamfered Currency Stem */}
       <path
-        d="M54 26H22C16.5 26 14 29 14 34V36C14 41 17.5 44 23 45L45 49C51.5 50 54 53 54 59V61C54 67 50.5 70 44 70H14"
-        stroke={gradient ? "url(#lsosDollarGrad)" : "currentColor"}
-        strokeWidth="11"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M 505 -60 L 555 -60 L 575 -40 L 575 180 L 485 180 L 485 -40 Z"
+        fill={gradient ? "url(#lsosDollarGrad)" : "currentColor"}
+      />
+      {/* Bottom Chamfered Currency Stem */}
+      <path
+        d="M 485 520 L 575 520 L 575 740 L 555 760 L 505 760 L 485 740 Z"
+        fill={gradient ? "url(#lsosDollarGrad)" : "currentColor"}
+      />
+      {/* Exact Vector Glyph S from LSOS Tech Regular font */}
+      <path
+        d="M 140 48 L 169 29 L 216 10 L 266 2 L 1002 4 L 853 166 L 329 166 L 314 172 L 298 185 L 289 200 L 285 216 L 287 235 L 293 248 L 310 265 L 335 275 L 783 275 L 831 284 L 878 305 L 905 324 L 943 368 L 956 397 L 966 429 L 966 525 L 958 555 L 945 586 L 926 614 L 884 654 L 827 685 L 785 696 L 754 700 L 60 700 L 195 542 L 707 540 L 733 528 L 749 511 L 754 496 L 754 475 L 747 456 L 728 439 L 705 431 L 258 431 L 211 423 L 155 401 L 134 385 L 100 349 L 83 317 L 73 286 L 71 172 L 83 126 L 100 92 Z"
+        fill={gradient ? "url(#lsosDollarGrad)" : "currentColor"}
       />
     </svg>
   );

@@ -98,12 +98,6 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
               Architecture
             </Link>
             <Link
-              href="#anti-clone"
-              className="text-sm font-medium text-white/70 transition-colors hover:text-white"
-            >
-              Anti-Clone
-            </Link>
-            <Link
               href="#safety"
               className="text-sm font-medium text-white/70 transition-colors hover:text-white"
             >
@@ -192,13 +186,6 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                 className="text-base font-medium text-white/80"
               >
                 Architecture
-              </Link>
-              <Link
-                href="#anti-clone"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-white/80"
-              >
-                Anti-Clone Registry
               </Link>
               <Link
                 href="#safety"

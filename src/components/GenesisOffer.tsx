@@ -36,10 +36,14 @@ export default function GenesisOffer({ onOpenModal }: GenesisOfferProps) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center gsap-reveal-title">
-          <h2 className="font-lsos text-3xl tracking-wider text-white sm:text-5xl lg:text-6xl">
-            LOOKING FOR OUR FIRST 10 PROJECTS. <br />
-            <span className="text-solana-gradient inline-flex items-baseline justify-center flex-wrap">
-              FREE&nbsp;<LsosDollar className="inline-block h-[0.76em] w-[0.56em] align-baseline -mb-[0.02em] mr-[0.04em]" />7,500&nbsp;SAAS UTILITY SUITE.
+          <h2 className="font-lsos text-2xl tracking-wider text-white sm:text-4xl md:text-5xl lg:text-6xl">
+            <span className="block">LOOKING FOR OUR FIRST</span>
+            <span className="block mt-1 sm:mt-2">10 PROJECTS.</span>
+            <span className="text-solana-gradient inline-flex items-baseline justify-center flex-wrap mt-2 sm:mt-3">
+              FREE&nbsp;<LsosDollar className="inline-block h-[0.74em] w-auto align-baseline -mb-[0.01em] mr-[0.04em]" />7,500&nbsp;SAAS
+            </span>
+            <span className="text-solana-gradient block mt-1 sm:mt-2">
+              UTILITY SUITE.
             </span>
           </h2>
 

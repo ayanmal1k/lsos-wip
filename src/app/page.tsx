@@ -6,7 +6,6 @@ import Hero from "@/components/Hero";
 import BrandMarquee from "@/components/BrandMarquee";
 import GenesisOffer from "@/components/GenesisOffer";
 import ArchitectureBento from "@/components/ArchitectureBento";
-import AntiCloneRegistry from "@/components/AntiCloneRegistry";
 import SafetyVerifier from "@/components/SafetyVerifier";
 import FeeCalculator from "@/components/FeeCalculator";
 import ComparisonMatrix from "@/components/ComparisonMatrix";
@@ -30,7 +29,6 @@ export default function Home() {
         <BrandMarquee />
         <GenesisOffer onOpenModal={() => setIsModalOpen(true)} />
         <ArchitectureBento />
-        <AntiCloneRegistry onOpenModal={() => setIsModalOpen(true)} />
         <SafetyVerifier />
         <FeeCalculator />
         <ComparisonMatrix />
