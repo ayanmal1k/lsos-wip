@@ -151,7 +151,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
               onClick={onOpenModal}
               className="relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-white px-4 py-2 text-xs font-semibold text-black transition-all duration-300 hover:bg-white/95 hover:shadow-lg hover:shadow-white/20 active:scale-95"
             >
-              <span>Apply for Genesis Slot</span>
+              <span>Apply for Slot</span>
               <IconArrowUpRight className="h-3.5 w-3.5 text-black" />
             </button>
           </div>
@@ -245,7 +245,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                   }}
                   className="rounded-lg bg-white py-3 text-sm font-semibold text-black"
                 >
-                  Apply for Genesis Partner Slot
+                  Apply for Slot
                 </button>
               </div>
             </div>
