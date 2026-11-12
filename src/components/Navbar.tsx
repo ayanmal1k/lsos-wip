@@ -121,6 +121,12 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
             >
               Roadmap
             </Link>
+            <Link
+              href="#faq"
+              className="text-sm font-medium text-white/70 transition-colors hover:text-white"
+            >
+              FAQ
+            </Link>
           </nav>
 
           {/* Desktop Actions */}
@@ -203,6 +209,13 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                 className="text-base font-medium text-white/80"
               >
                 Roadmap
+              </Link>
+              <Link
+                href="#faq"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-medium text-white/80"
+              >
+                FAQ
               </Link>
 
               <div className="mt-4 flex flex-col gap-3 pt-4 border-t border-white/10">

@@ -15,6 +15,7 @@ export default function Roadmap() {
       title: "Solana Mainnet Launch & Standalone Pools",
       desc: "Full deployment of the core LSOS Anchor PDA contracts, native SOL and USDC standalone liquidity pools, Streamflow programmatic lock integration, and deployment of the First 10 Genesis Partners.",
       deliverables: [
+        "Corporate Restructuring & Dubai Freezone Incorporation (Official registration and compliance alignment for institutional-grade operations prior to global launch)",
         "Private Jito Validator Bundling (Zero sniper mempool leaks)",
         "Automated Streamflow Locks (70% LP locked forever, 30% linear vesting)",
         "0.175% Flat Transaction Fee on Standalone Pools",

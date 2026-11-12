@@ -11,6 +11,7 @@ import SafetyVerifier from "@/components/SafetyVerifier";
 import FeeCalculator from "@/components/FeeCalculator";
 import ComparisonMatrix from "@/components/ComparisonMatrix";
 import Roadmap from "@/components/Roadmap";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import ApplicationModal from "@/components/ApplicationModal";
 import GSAPScrollController from "@/components/GSAPScrollController";
@@ -34,6 +35,7 @@ export default function Home() {
         <FeeCalculator />
         <ComparisonMatrix />
         <Roadmap />
+        <FAQ />
       </main>
 
       <Footer />

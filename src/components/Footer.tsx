@@ -116,6 +116,11 @@ export default function Footer() {
               </span>
               <ul className="mt-4 space-y-2.5 text-xs text-white/70">
                 <li>
+                  <Link href="#faq" className="hover:text-white">
+                    Frequently Asked Questions
+                  </Link>
+                </li>
+                <li>
                   <a
                     href="https://t.me/lsos2026"
                     target="_blank"
