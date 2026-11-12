@@ -246,7 +246,7 @@ export default function Hero({ onOpenModal }: HeroProps) {
                 {/* Genesis Intake Status & CTA */}
                 <div className="mt-6 border-t border-white/10 pt-5">
                   <div className="mb-4 flex items-center justify-between text-xs">
-                    <span className="font-mono text-white/50">Genesis Intake Status:</span>
+                    <span className="font-mono text-white/50">Genesis Intake (Sister Tokens):</span>
                     <span className="font-mono font-bold text-white">
                       0 / 10 Slots Shortlisted
                     </span>
@@ -261,7 +261,7 @@ export default function Hero({ onOpenModal }: HeroProps) {
                   </button>
 
                   <p className="mt-2 text-center font-mono text-[11px] text-white/40">
-                    Includes Free $7,500 SaaS Utility Suite • 0 SOL Upfront Cost
+                    Established Communities Only • Max 60-Day Presale • Free $7,500 SaaS Suite
                   </p>
                 </div>
               </div>

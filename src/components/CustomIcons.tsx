@@ -678,3 +678,50 @@ export function IconClose({ className = "w-5 h-5" }: { className?: string }) {
     </svg>
   );
 }
+
+// 25. Custom LSOS Tech Regular Style Dollar Sign ($)
+// Designed to match the geometric, chamfered, uppercase typography of LSOS Tech Regular
+export function LsosDollar({
+  className = "inline-block h-[0.84em] w-[0.6em] align-baseline -mb-[0.02em] mr-[0.04em]",
+  gradient = true,
+}: {
+  className?: string;
+  gradient?: boolean;
+}) {
+  return (
+    <svg
+      viewBox="0 0 68 96"
+      fill="none"
+      className={className}
+      aria-label="$"
+      style={{ display: "inline-block", verticalAlign: "baseline" }}
+    >
+      <defs>
+        <linearGradient id="lsosDollarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#00f4fd" />
+          <stop offset="35%" stopColor="#0569ff" />
+          <stop offset="70%" stopColor="#5922f6" />
+          <stop offset="100%" stopColor="#db15f2" />
+        </linearGradient>
+      </defs>
+      {/* Central Vertical Currency Spine */}
+      <line
+        x1="34"
+        y1="5"
+        x2="34"
+        y2="91"
+        stroke={gradient ? "url(#lsosDollarGrad)" : "currentColor"}
+        strokeWidth="7"
+        strokeLinecap="round"
+      />
+      {/* Boxy Geometric S Body with Chamfered Corners matching LSOS Tech Regular */}
+      <path
+        d="M54 26H22C16.5 26 14 29 14 34V36C14 41 17.5 44 23 45L45 49C51.5 50 54 53 54 59V61C54 67 50.5 70 44 70H14"
+        stroke={gradient ? "url(#lsosDollarGrad)" : "currentColor"}
+        strokeWidth="11"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}

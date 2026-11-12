@@ -35,10 +35,11 @@ export default function Footer() {
                 href="https://t.me/lsos2026"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Official Telegram Announcements (Broadcast Only)"
                 className="inline-flex items-center gap-1.5 text-solana-cyan hover:underline"
               >
                 <IconTelegram className="h-4 w-4" />
-                <span>t.me/lsos2026</span>
+                <span>t.me/lsos2026 (Announcements)</span>
               </a>
 
               <a
@@ -121,7 +122,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 hover:text-white"
                   >
-                    <span>Telegram Group</span>
+                    <span>Telegram Announcements</span>
                     <IconArrowUpRight className="h-3 w-3" />
                   </a>
                 </li>

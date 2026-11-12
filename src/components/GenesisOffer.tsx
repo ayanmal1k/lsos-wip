@@ -12,6 +12,8 @@ import {
   IconBurnFlame,
   IconSparkles,
   IconArrowRight,
+  IconCheckmark,
+  LsosDollar,
 } from "./CustomIcons";
 
 interface GenesisOfferProps {
@@ -36,8 +38,8 @@ export default function GenesisOffer({ onOpenModal }: GenesisOfferProps) {
         <div className="text-center gsap-reveal-title">
           <h2 className="font-lsos text-3xl tracking-wider text-white sm:text-5xl lg:text-6xl">
             LOOKING FOR OUR FIRST 10 PROJECTS. <br />
-            <span className="text-solana-gradient">
-              FREE $7,500 SAAS UTILITY SUITE.
+            <span className="text-solana-gradient inline-flex items-baseline justify-center flex-wrap">
+              FREE&nbsp;<LsosDollar className="inline-block h-[0.76em] w-[0.56em] align-baseline -mb-[0.02em] mr-[0.04em]" />7,500&nbsp;SAAS UTILITY SUITE.
             </span>
           </h2>
 
@@ -47,14 +49,20 @@ export default function GenesisOffer({ onOpenModal }: GenesisOfferProps) {
         </div>
 
         {/* Honest Cohort Status Box */}
-        <div className="mx-auto mt-12 max-w-3xl rounded-2xl border border-white/10 bg-white/[0.02] p-6 text-center backdrop-blur-md sm:p-8 gsap-reveal-title">
-          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row sm:text-left">
+        <div className="mx-auto mt-12 max-w-4xl rounded-3xl border border-white/10 bg-white/[0.02] p-6 backdrop-blur-md sm:p-8 gsap-reveal-title">
+          <div className="flex flex-col items-center justify-between gap-4 border-b border-white/10 pb-6 sm:flex-row sm:text-left">
             <div>
-              <h3 className="text-xl font-bold text-white">
-                0 OF 10 GENESIS SLOTS SHORTLISTED
-              </h3>
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-solana-cyan opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-solana-cyan" />
+                </span>
+                <h3 className="text-xl font-bold text-white">
+                  0 OF 10 GENESIS SLOTS SHORTLISTED
+                </h3>
+              </div>
               <p className="mt-1 text-xs text-white/60">
-                All 10 slots are currently open. Pioneer projects receive full founder support and the complete $7,500 SaaS Utility Suite.
+                All 10 slots are currently open. Selected partner projects receive direct founder integration support and the complete $7,500 SaaS Utility Suite.
               </p>
             </div>
 
@@ -65,6 +73,33 @@ export default function GenesisOffer({ onOpenModal }: GenesisOfferProps) {
               <span>Apply for Genesis Partner Slot</span>
               <IconArrowRight className="h-3.5 w-3.5 text-black" />
             </button>
+          </div>
+
+          {/* Mandatory Genesis Qualifications */}
+          <div className="mt-6 grid gap-4 text-xs sm:grid-cols-2">
+            <div className="rounded-2xl border border-solana-cyan/20 bg-solana-cyan/[0.03] p-4">
+              <div className="flex items-center gap-2">
+                <IconCheckmark className="h-4 w-4 shrink-0 text-solana-cyan" />
+                <span className="font-mono font-bold uppercase tracking-wider text-solana-cyan">
+                  Sister Token &amp; Existing Community
+                </span>
+              </div>
+              <p className="mt-2 text-white/70 leading-relaxed">
+                Reserved exclusively for official sister tokens or ecosystem utility sub-tokens of established projects with an existing, active community (X / Telegram / Discord). Cold-start projects without community are not eligible.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-solana-magenta/20 bg-solana-magenta/[0.03] p-4">
+              <div className="flex items-center gap-2">
+                <IconCheckmark className="h-4 w-4 shrink-0 text-solana-magenta" />
+                <span className="font-mono font-bold uppercase tracking-wider text-solana-magenta">
+                  Max 60-Day Presale Duration
+                </span>
+              </div>
+              <p className="mt-2 text-white/70 leading-relaxed">
+                All 10 Genesis projects must have a presale campaign duration capped at a maximum of 60 days on the LSOS non-custodial Anchor PDA before standalone pool initialization.
+              </p>
+            </div>
           </div>
         </div>
 

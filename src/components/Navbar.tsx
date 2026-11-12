@@ -98,6 +98,12 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
               Architecture
             </Link>
             <Link
+              href="#anti-clone"
+              className="text-sm font-medium text-white/70 transition-colors hover:text-white"
+            >
+              Anti-Clone
+            </Link>
+            <Link
               href="#safety"
               className="text-sm font-medium text-white/70 transition-colors hover:text-white"
             >
@@ -123,10 +129,11 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
               href="https://t.me/lsos2026"
               target="_blank"
               rel="noopener noreferrer"
+              title="Official Telegram Announcements (Broadcast Only)"
               className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-3.5 py-2 text-xs font-medium text-white/80 transition-all hover:border-solana-cyan/40 hover:bg-white/[0.08] hover:text-white"
             >
               <IconTelegram className="h-4 w-4" />
-              <span>Telegram</span>
+              <span>Announcements</span>
             </a>
 
             <button
@@ -170,6 +177,13 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                 Architecture
               </Link>
               <Link
+                href="#anti-clone"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-medium text-white/80"
+              >
+                Anti-Clone Registry
+              </Link>
+              <Link
                 href="#safety"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-base font-medium text-white/80"
@@ -199,7 +213,7 @@ export default function Navbar({ onOpenModal }: NavbarProps) {
                   className="flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/5 py-3 text-sm font-medium text-white"
                 >
                   <IconTelegram className="h-4 w-4" />
-                  <span>Join Official Telegram</span>
+                  <span>TG Announcements (Broadcast Only)</span>
                 </a>
                 <button
                   onClick={() => {
